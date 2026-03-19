@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional Developer Portfolio - Full Stack Developer specializing in MERN Stack" />
+  <meta name="keywords" content="developer, portfolio, full stack, MERN, web developer" />
+  <title>Portfolio | Full Stack Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <span class="logo-text">&lt;</span>
+        <span class="logo-slash">DEV</span>
+        <span class="logo-text">/&gt;</span>
+      </div>
+      <div class="preloader-bar">
+        <div class="preloader-fill"></div>
+      </div>
+      <p class="preloader-label mono">Initializing...</p>
+    </div>
+  </div>
+
+  <!-- ===== SCROLL PROGRESS ===== -->
+  <div id="scroll-progress"><div id="scroll-bar"></div></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Portfolio<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <a href="resume/Nischay_Kumar_Resume.pdf" download class="btn btn-nav">
+          <i class="fas fa-download"></i> Resume
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero">
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="hero-content">
+      <div class="hero-image-col" data-aos="fade-right" data-aos-duration="1000">
+        <div class="hero-img-wrapper">
+          <div class="hero-img-ring ring-1"></div>
+          <div class="hero-img-ring ring-2"></div>
+          <div class="hero-img-ring ring-3"></div>
+          <img src="images/Half_Profile.jpg" alt="Profile" class="hero-img floating"
+               onerror="this.src='https://api.dicebear.com/7.x/initials/svg?seed=Dev&backgroundColor=0a0a1a&textColor=00d4ff'" />
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Available for work
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-text-col" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+        <p class="hero-greeting mono">Hello World! I'm</p>
+        <h1 class="hero-name">Nischay <span class="accent">Kumar</span></h1>
+        <div class="hero-typed-wrapper">
+          <span class="typed-prefix">I'm a </span>
+          <span id="typed-text" class="typed-accent"></span>
+        </div>
+        <p class="hero-bio">
+          Crafting exceptional digital experiences through elegant code and thoughtful design.
+          Passionate about building scalable, performant web applications that make an impact.
+        </p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">
+            <span>Hire Me</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="resume/Nischay_Kumar_Resume.pdf" download class="btn btn-outline">
+            <i class="fas fa-download"></i>
+            <span>Download CV</span>
+          </a>
+        </div>
+        <div class="hero-socials">
+          <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="mailto:alex@example.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span class="mono">Scroll</span>
+      <div class="scroll-line"><div class="scroll-dot"></div></div>
+    </div>
+  </section>
+
+  <!-- ===== STATS SECTION ===== -->
+  <section id="stats" class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-number" data-count="10">0</div>
+          <div class="stat-suffix">+</div>
+          <p class="stat-label">Projects Completed</p>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-number" data-count="25">0</div>
+          <div class="stat-suffix">+</div>
+          <p class="stat-label">Technologies Known</p>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-number" data-count="0">0</div>
+          <div class="stat-suffix">+</div>
+          <p class="stat-label">Happy Clients</p>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-number" data-count="1">0</div>
+          <div class="stat-suffix">+</div>
+          <p class="stat-label">Years Experience</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="about-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag mono">01. About</span>
+        <h2 class="section-title">Who I <span class="accent">Am</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-img-col" data-aos="fade-right" data-aos-duration="900">
+          <div class="about-img-frame">
+            <img src="images/Full_Profile.jpg" alt="About Me"
+                 onerror="this.src='https://api.dicebear.com/7.x/initials/svg?seed=AJ&backgroundColor=111827&textColor=00d4ff&fontSize=36'" />
+            <div class="about-img-decoration"></div>
+          </div>
+        </div>
+
+        <div class="about-text-col" data-aos="fade-left" data-aos-duration="900" data-aos-delay="100">
+          <h3 class="about-subtitle">Full Stack Developer & Problem Solver</h3>
+          <p class="about-bio">
+           I'm a passionate Full Stack Developer specializing in the MERN stack, with hands-on experience building dynamic and responsive web applications. I enjoy turning complex problems into efficient, user-focused solutions.
+          </p>
+          <p class="about-bio">
+            When I'm not coding, you'll find me exploring new technologies, contributing to open source,
+            or sharing knowledge with the developer community.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-map-marker-alt accent"></i>
+              <span>Benguluru, India</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-graduation-cap accent"></i>
+              <span>Bca. Computer Application</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-briefcase accent"></i>
+              <span>Open to  Work</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-code accent"></i>
+              <span>Full Stack Developer</span>
+            </div>
+          </div>
+
+          <!-- Timeline -->
+          <div class="timelines-wrapper">
+            <div class="timeline-block">
+              <h4 class="timeline-heading"><i class="fas fa-graduation-cap"></i> Education</h4>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="timeline-year mono">2022 – 2025</span>
+                    <h5>Bca. Computer Application</h5>
+                    <p>Manipal University</p>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="timeline-year mono">2019 – 2020</span>
+                    <h5>Intermediate</h5>
+                    <p>Shri sher shah College</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-block">
+              <h4 class="timeline-heading"><i class="fas fa-briefcase"></i> Experience</h4>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="timeline-year mono">June 2025 - July 2025</span>
+                    <h5>Full Stack Developer Intern</h5>
+                    <p>Code Resite</p>
+                  </div>
+                </div>
+                <!-- <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-content">
+                    <span class="timeline-year mono">2021 – 2022</span>
+                    <h5>Frontend Intern</h5>
+                    <p>StartupXYZ</p>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section id="skills" class="skills-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag mono">02. Skills</span>
+        <h2 class="section-title">My <span class="accent">Expertise</span></h2>
+      </div>
+
+      <div class="skills-categories" data-aos="fade-up" data-aos-delay="100">
+        <button class="skill-cat-btn active" data-cat="all">All</button>
+        <button class="skill-cat-btn" data-cat="frontend">Frontend</button>
+        <button class="skill-cat-btn" data-cat="backend">Backend</button>
+        <button class="skill-cat-btn" data-cat="database">Database</button>
+        <button class="skill-cat-btn" data-cat="tools">Tools</button>
+      </div>
+
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Frontend -->
+        <div class="skill-card" data-cat="frontend" data-aos="zoom-in" data-aos-delay="0">
+          <div class="skill-icon-wrap"><i class="devicon-html5-plain colored"></i></div>
+          <h4 class="skill-name">HTML5</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="95"></div></div>
+          <span class="skill-percent mono">95%</span>
+        </div>
+        <div class="skill-card" data-cat="frontend" data-aos="zoom-in" data-aos-delay="60">
+          <div class="skill-icon-wrap"><i class="devicon-css3-plain colored"></i></div>
+          <h4 class="skill-name">CSS3</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div>
+          <span class="skill-percent mono">90%</span>
+        </div>
+        <div class="skill-card" data-cat="frontend" data-aos="zoom-in" data-aos-delay="120">
+          <div class="skill-icon-wrap"><i class="devicon-javascript-plain colored"></i></div>
+          <h4 class="skill-name">JavaScript</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div>
+          <span class="skill-percent mono">80%</span>
+        </div>
+        <div class="skill-card" data-cat="frontend" data-aos="zoom-in" data-aos-delay="180">
+          <div class="skill-icon-wrap"><i class="devicon-react-original colored"></i></div>
+          <h4 class="skill-name">React</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div>
+          <span class="skill-percent mono">70%</span>
+        </div>
+        <!-- Backend -->
+        <div class="skill-card" data-cat="backend" data-aos="zoom-in" data-aos-delay="0">
+          <div class="skill-icon-wrap"><i class="devicon-nodejs-plain colored"></i></div>
+          <h4 class="skill-name">Node.js</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div>
+          <span class="skill-percent mono">85%</span>
+        </div>
+        <div class="skill-card" data-cat="backend" data-aos="zoom-in" data-aos-delay="60">
+          <div class="skill-icon-wrap"><i class="devicon-express-original"></i></div>
+          <h4 class="skill-name">Express.js</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div>
+          <span class="skill-percent mono">82%</span>
+        </div>
+        <!-- <div class="skill-card" data-cat="backend" data-aos="zoom-in" data-aos-delay="120">
+          <div class="skill-icon-wrap"><i class="devicon-python-plain colored"></i></div>
+          <h4 class="skill-name">Python</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="75"></div></div>
+          <span class="skill-percent mono">75%</span>
+        </div> -->
+        <!-- Database -->
+        <div class="skill-card" data-cat="database" data-aos="zoom-in" data-aos-delay="0">
+          <div class="skill-icon-wrap"><i class="devicon-mongodb-plain colored"></i></div>
+          <h4 class="skill-name">MongoDB</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="87"></div></div>
+          <span class="skill-percent mono">87%</span>
+        </div>
+        <div class="skill-card" data-cat="database" data-aos="zoom-in" data-aos-delay="60">
+          <div class="skill-icon-wrap"><i class="devicon-mysql-plain colored"></i></div>
+          <h4 class="skill-name">MySQL</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="78"></div></div>
+          <span class="skill-percent mono">78%</span>
+        </div>
+        <!-- Tools -->
+        <div class="skill-card" data-cat="tools" data-aos="zoom-in" data-aos-delay="0">
+          <div class="skill-icon-wrap"><i class="devicon-git-plain colored"></i></div>
+          <h4 class="skill-name">Git</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div>
+          <span class="skill-percent mono">70%</span>
+        </div>
+        <div class="skill-card" data-cat="tools" data-aos="zoom-in" data-aos-delay="60">
+          <div class="skill-icon-wrap"><i class="devicon-tailwindcss-plain colored"></i></div>
+          <h4 class="skill-name">Tailwind Css</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div>
+          <span class="skill-percent mono">70%</span>
+        </div>
+        <div class="skill-card" data-cat="tools" data-aos="zoom-in" data-aos-delay="120">
+          <div class="skill-icon-wrap"><i class="devicon-bootstrap-plain colored"></i></div>
+          <h4 class="skill-name">Bootstrap</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div>
+          <span class="skill-percent mono">88%</span>
+        </div>
+        <div class="skill-card" data-cat="tools" data-aos="zoom-in" data-aos-delay="120">
+          <div class="skill-icon-wrap"><i class="devicon-vscode-plain colored"></i></div>
+          <h4 class="skill-name">Vs Code</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div>
+          <span class="skill-percent mono">88%</span>
+        </div>
+        <div class="skill-card" data-cat="tools" data-aos="zoom-in" data-aos-delay="120">
+          <div class="skill-icon-wrap"><i class="devicon-github-original colored"></i></div>
+          <h4 class="skill-name">GitHub</h4>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div>
+          <span class="skill-percent mono">88%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section id="projects" class="projects-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag mono">03. Projects</span>
+        <h2 class="section-title">Featured <span class="accent">Work</span></h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-img-wrap">
+            <img src="images/project1.png" alt="Project 1"
+                 onerror="this.src='https://placehold.co/600x360/0d1117/00d4ff?text=E-Commerce+Platform&font=mono'" />
+            <div class="project-overlay">
+              <a href="https://healthit-qp1v.onrender.com" class="btn btn-sm btn-primary" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/nk7102001/Healthit" class="btn btn-sm btn-outline" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">Html</span><span class="tag">Css</span><span class="tag">Javascript</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MongoDB</span>
+            </div>
+            <h3 class="project-name">Healthit - Health & Fitness Platform</h3>
+            <p class="project-desc">Built a Fullstack  health platform with AI-generated diet/workout plans.</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img-wrap">
+            <img src="images/project2.png" alt="Project 2"
+                 onerror="this.src='https://placehold.co/600x360/0d1117/a855f7?text=Task+Manager+App&font=mono'" />
+            <div class="project-overlay">
+              <a href="https://sabjiwala-x6y1.onrender.com" class="btn btn-sm btn-primary" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/nk7102001/sabjiwala" class="btn btn-sm btn-outline" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+               <span class="tag">Html</span><span class="tag">Css</span><span class="tag">Javascript</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MongoDB</span>
+            </div>
+            <h3 class="project-name">Sabjiwala - Online Grocery Ordering System</h3>
+            <p class="project-desc">Developed a multi-role platform for customers, vendors, admins, and delivery partners.</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img-wrap">
+            <img src="images/project3.png" alt="Project 3"
+                 onerror="this.src='https://placehold.co/600x360/0d1117/10b981?text=AI+Chat+Assistant&font=mono'" />
+            <div class="project-overlay">
+              <a href="https://wanderhub-nv3i.onrender.com" class="btn btn-sm btn-primary" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/nk7102001/wanderhub" class="btn btn-sm btn-outline" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">Html</span><span class="tag">Css</span><span class="tag">Javascript</span><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">MongoDB</span>
+            </div>
+            <h3 class="project-name">Wanderhub - Hotel Booking</h3>
+            <p class="project-desc">A hotel booking system with features like reviews, authentication and authorization</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-img-wrap">
+            <img src="images/project4.png" alt="Project 4"
+                 onerror="this.src='https://placehold.co/600x360/0d1117/f59e0b?text=Social+Dashboard&font=mono'" />
+            <div class="project-overlay">
+              <a href="http://drivepro.infinityfreeapp.com/" class="btn btn-sm btn-primary" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="#" class="btn btn-sm btn-outline" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">Html</span><span class="tag">Css</span><span class="tag">Javascript</span><span class="tag">Bootstrap 5</span><span class="tag">Core PHP</span><span class="tag">MySQL</span><span class="tag">InfinityFree</span>
+            </div>
+            <h3 class="project-name">DrivePro — Car Rental Agency Web Application</h3>
+            <p class="project-desc">A web app for renting cars — customers book, agencies manage.</p>
+          </div>
+        </div>
+
+        <!-- <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img-wrap">
+            <img src="images/project5.jpg" alt="Project 5"
+                 onerror="this.src='https://placehold.co/600x360/0d1117/ef4444?text=Food+Delivery+App&font=mono'" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="#" class="btn btn-sm btn-outline" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">React Native</span><span class="tag">Firebase</span>
+            </div>
+            <h3 class="project-name">Food Delivery App</h3>
+            <p class="project-desc">Cross-platform mobile app with real-time order tracking and push notifications.</p>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img-wrap">
+            <img src="images/project6.jpg" alt="Project 6"
+                 onerror="this.src='https://placehold.co/600x360/0d1117/8b5cf6?text=DevBlog+Platform&font=mono'" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary" target="_blank">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="#" class="btn btn-sm btn-outline" target="_blank">
+                <i class="fab fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="tag">Next.js</span><span class="tag">MDX</span><span class="tag">PostgreSQL</span>
+            </div>
+            <h3 class="project-name">DevBlog Platform</h3>
+            <p class="project-desc">Developer blogging platform with markdown support, SEO optimization, and comments.</p>
+          </div>
+        </div>
+
+      </div>
+    </div> -->
+  </section>
+
+  <!-- ===== SERVICES SECTION ===== -->
+  <section id="services" class="services-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag mono">04. Services</span>
+        <h2 class="section-title">What I <span class="accent">Offer</span></h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="service-icon-wrap">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-desc">Building responsive, high-performance websites with modern frameworks and best practices.</p>
+          <ul class="service-list">
+            <li>Custom Website Design</li>
+            <li>Landing Pages</li>
+            <li>Progressive Web Apps</li>
+          </ul>
+          <div class="service-number mono">01</div>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-icon-wrap">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3 class="service-title">Full Stack Development</h3>
+          <p class="service-desc">End-to-end development from database architecture to polished user interfaces.</p>
+          <ul class="service-list">
+            <li>MERN Stack Apps</li>
+            <li>Scalable Architecture</li>
+            <li>Authentication & Security</li>
+          </ul>
+          <div class="service-number mono">02</div>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-icon-wrap">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h3 class="service-title">API Development</h3>
+          <p class="service-desc">Designing and building robust RESTful and GraphQL APIs for seamless integrations.</p>
+          <ul class="service-list">
+            <li>REST API Design</li>
+            <li>GraphQL APIs</li>
+            <li>Third-party Integrations</li>
+          </ul>
+          <div class="service-number mono">03</div>
+        </div>
+
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon-wrap">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 class="service-title">UI/UX Design</h3>
+          <p class="service-desc">Creating intuitive, beautiful interfaces that delight users and drive engagement.</p>
+          <ul class="service-list">
+            <li>Wireframing & Prototyping</li>
+            <li>Design Systems</li>
+            <li>User Research</li>
+          </ul>
+          <div class="service-number mono">04</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESUME SECTION ===== -->
+  <section id="resume" class="resume-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag mono">05. Resume</span>
+        <h2 class="section-title">My <span class="accent">Resume</span></h2>
+      </div>
+
+      <div class="resume-card" data-aos="zoom-in" data-aos-duration="800">
+        <div class="resume-preview">
+          <div class="resume-mock">
+            <div class="resume-mock-header">
+              <div class="resume-mock-avatar"></div>
+              <div class="resume-mock-info">
+                <div class="resume-mock-line long"></div>
+                <div class="resume-mock-line short"></div>
+                <div class="resume-mock-line medium"></div>
+              </div>
+            </div>
+            <div class="resume-mock-section">
+              <div class="resume-mock-line section-head"></div>
+              <div class="resume-mock-line long"></div>
+              <div class="resume-mock-line medium"></div>
+              <div class="resume-mock-line long"></div>
+            </div>
+            <div class="resume-mock-section">
+              <div class="resume-mock-line section-head"></div>
+              <div class="resume-mock-line long"></div>
+              <div class="resume-mock-line medium"></div>
+            </div>
+            <div class="resume-mock-section">
+              <div class="resume-mock-line section-head"></div>
+              <div class="resume-mock-tags">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="resume-info">
+          <h3>Nischay kumar</h3>
+          <p class="mono accent">Full Stack Developer</p>
+          <p class="resume-desc">Download my complete resume to see my full work experience, education, projects, and technical skills.</p>
+          <div class="resume-stats">
+            <div><strong class="accent">2+</strong> Years Exp.</div>
+            <div><strong class="accent">50+</strong> Projects</div>
+            <div><strong class="accent">20+</strong> Technologies</div>
+          </div>
+          <a href="resume/Nischay_Kumar_Resume.pdf" download class="btn btn-primary resume-download-btn">
+            <i class="fas fa-download"></i> Download Resume PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="contact-section section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag mono">06. Contact</span>
+        <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+        <p class="section-subtitle">Have a project in mind? Let's build something amazing together.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-col" data-aos="fade-right">
+          <div class="contact-info-card">
+            <h3>Let's talk</h3>
+            <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <div>
+                  <span class="contact-label mono">Email</span>
+                  <a href="mailto:alex@example.com">nk9097937120@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <div>
+                  <span class="contact-label mono">Phone</span>
+                  <a href="tel:+11234567890">(+91) 9123204630</a>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <span class="contact-label mono">Location</span>
+                  <span>Benguluru, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-icon" aria-label="Dev.to"><i class="fab fa-dev"></i></a>
+            </div>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div class="map-placeholder" data-aos="fade-up" data-aos-delay="200">
+            <div class="map-inner">
+              <i class="fas fa-map-marked-alt map-icon"></i>
+              <p>Benguluru, India</p>
+              <span class="mono">37.7749° N, 122.4194° W</span>
+            </div>
+            <div class="map-pulse"></div>
+          </div>
+        </div>
+
+        <div class="contact-form-col" data-aos="fade-left">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name" class="form-label">Full Name</label>
+              <div class="input-wrap">
+                <i class="fas fa-user input-icon"></i>
+                <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address</label>
+              <div class="input-wrap">
+                <i class="fas fa-envelope input-icon"></i>
+                <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <div class="input-wrap">
+                <i class="fas fa-tag input-icon"></i>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <div class="input-wrap textarea-wrap">
+                <i class="fas fa-comment input-icon"></i>
+                <textarea id="message" name="message" class="form-input form-textarea" rows="5" placeholder="Tell me about your project..." required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span id="btnText"><i class="fas fa-paper-plane"></i> Send Message</span>
+              <span id="btnLoading" style="display:none"><i class="fas fa-circle-notch fa-spin"></i> Sending...</span>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>Portfolio<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>Building the future, one line of code at a time.</p>
+          <div class="footer-socials">
+            <a href="https://github.com/nk7102001" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/nischay--kumar/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://facebook.com/nischay.kumargupta1" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://instagram.com/n__i_s_c_h_a__y" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram-square"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">Full Stack Dev</a></li>
+            <li><a href="#services">API Development</a></li>
+            <li><a href="#services">UI/UX Design</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-col">
+          <h4>Contact</h4>
+          <p><i class="fas fa-envelope accent"></i> nk9097937120@gmail.com</p>
+          <p><i class="fas fa-phone accent"></i> (+91) 9123204630</p>
+          <p><i class="fas fa-map-marker-alt accent"></i> Benguluru, India</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mono">© <span id="year"></span> Nischay Kumar Crafted with <i class="fas fa-heart accent"></i> & lots of ☕</p>
+        <p class="mono footer-tech">Built with HTML · CSS · JavaScript</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ===== CURSOR ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
