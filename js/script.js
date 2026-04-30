@@ -1,18 +1,13 @@
-/* =============================================
-   PORTFOLIO JAVASCRIPT
-   Handles: Preloader, Particles, Typed.js, AOS,
-   GSAP, Skill bars, Counter, Theme, Cursor,
-   Contact form, Scroll effects, Navigation
-   ============================================= */
+
 
 'use strict';
 
-/* ===== UTILITY ===== */
+/*    UTILITY    */
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 const on = (el, ev, fn, opts) => el && el.addEventListener(ev, fn, opts);
 
-/* ===== PRELOADER ===== */
+/*    PRELOADER    */
 (function initPreloader() {
   const loader = $('#preloader');
   if (!loader) return;
@@ -29,7 +24,7 @@ const on = (el, ev, fn, opts) => el && el.addEventListener(ev, fn, opts);
   });
 })();
 
-/* ===== HERO ENTRANCE (GSAP) ===== */
+/*    HERO ENTRANCE (GSAP)    */
 function triggerHeroEntrance() {
   if (typeof gsap === 'undefined') return;
 
@@ -49,7 +44,7 @@ function triggerHeroEntrance() {
   gsap.from('#navbar', { y: -80, opacity: 0, duration: 0.8, ease: 'power2.out', delay: 0.1 });
 }
 
-/* ===== PARTICLES CANVAS ===== */
+/*    PARTICLES CANVAS    */
 (function initParticles() {
   const canvas = $('#particleCanvas');
   if (!canvas) return;
@@ -146,7 +141,7 @@ function triggerHeroEntrance() {
   init();
 })();
 
-/* ===== TYPED.JS ===== */
+/*    TYPED.JS    */
 (function initTyped() {
   const el = $('#typed-text');
   if (!el || typeof Typed === 'undefined') return;
@@ -169,7 +164,7 @@ function triggerHeroEntrance() {
   });
 })();
 
-/* ===== AOS INIT ===== */
+/*    AOS INIT    */
 (function initAOS() {
   if (typeof AOS === 'undefined') return;
   AOS.init({
@@ -181,7 +176,7 @@ function triggerHeroEntrance() {
   });
 })();
 
-/* ===== NAVBAR ===== */
+/*    NAVBAR    */
 (function initNavbar() {
   const navbar = $('#navbar');
   const hamburger = $('#hamburger');
@@ -251,12 +246,12 @@ function triggerHeroEntrance() {
   });
 })();
 
-// Fix variable in function
+
 function var_(name, fallback) {
   return parseInt(getComputedStyle(document.documentElement).getPropertyValue(name)) || fallback;
 }
 
-/* ===== SCROLL PROGRESS BAR ===== */
+/*    SCROLL PROGRESS BAR    */
 (function initScrollProgress() {
   const bar = $('#scroll-bar');
   if (!bar) return;
@@ -266,7 +261,7 @@ function var_(name, fallback) {
   }, { passive: true });
 })();
 
-/* ===== BACK TO TOP ===== */
+/*    BACK TO TOP    */
 (function initBackToTop() {
   const btn = $('#backToTop');
   if (!btn) return;
@@ -274,7 +269,7 @@ function var_(name, fallback) {
   on(btn, 'click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 })();
 
-/* ===== ANIMATED COUNTERS ===== */
+/*    ANIMATED COUNTERS    */
 (function initCounters() {
   const counters = $$('.stat-number[data-count]');
   if (!counters.length) return;
@@ -304,7 +299,7 @@ function var_(name, fallback) {
   counters.forEach(c => observer.observe(c));
 })();
 
-/* ===== SKILL BARS ===== */
+/*    SKILL BARS    */
 (function initSkillBars() {
   const bars = $$('.skill-bar[data-width]');
   if (!bars.length) return;
@@ -321,7 +316,7 @@ function var_(name, fallback) {
   bars.forEach(b => observer.observe(b));
 })();
 
-/* ===== SKILL FILTER ===== */
+/*    SKILL FILTER    */
 (function initSkillFilter() {
   const buttons = $$('.skill-cat-btn');
   const cards = $$('.skill-card[data-cat]');
@@ -345,7 +340,7 @@ function var_(name, fallback) {
   });
 })();
 
-/* ===== CUSTOM CURSOR ===== */
+/*    CUSTOM CURSOR    */
 (function initCursor() {
   const dot = $('#cursorDot');
   const outline = $('#cursorOutline');
@@ -391,7 +386,7 @@ function var_(name, fallback) {
   });
 })();
 
-/* ===== THEME TOGGLE ===== */
+/*    THEME TOGGLE    */
 (function initTheme() {
   const toggle = $('#themeToggle');
   const icon = $('#themeIcon');
@@ -416,7 +411,7 @@ function var_(name, fallback) {
   }
 })();
 
-/* ===== CONTACT FORM ===== */
+/*    CONTACT FORM    */
 (function initContactForm() {
   const form = $('#contactForm');
   if (!form) return;
@@ -460,13 +455,13 @@ function var_(name, fallback) {
   });
 })();
 
-/* ===== FOOTER YEAR ===== */
+/*    FOOTER YEAR    */
 (function setYear() {
   const el = $('#year');
   if (el) el.textContent = new Date().getFullYear();
 })();
 
-/* ===== GSAP SCROLL ANIMATIONS ===== */
+/*    GSAP SCROLL ANIMATIONS    */
 (function initGSAPScrollAnimations() {
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
@@ -514,7 +509,7 @@ function var_(name, fallback) {
   });
 })();
 
-/* ===== NAVBAR ACTIVE UPDATE (INTERSECTION OBSERVER) ===== */
+/*    NAVBAR ACTIVE UPDATE (INTERSECTION OBSERVER)    */
 (function initActiveNavObserver() {
   const sections = $$('section[id]');
   const navLinks = $$('.nav-link');
@@ -535,7 +530,7 @@ function var_(name, fallback) {
   sections.forEach(s => observer.observe(s));
 })();
 
-/* ===== PROJECT CARD TILT EFFECT ===== */
+/*    PROJECT CARD TILT EFFECT    */
 (function initTilt() {
   if (window.innerWidth < 768) return;
 
@@ -553,7 +548,7 @@ function var_(name, fallback) {
   });
 })();
 
-/* ===== GLOWING MOUSE TRAIL ===== */
+/*    GLOWING MOUSE TRAIL    */
 (function initMouseGlow() {
   if (window.innerWidth < 768) return;
 
@@ -569,7 +564,7 @@ function var_(name, fallback) {
   });
 })();
 
-/* ===== LAZY LOAD IMAGES ===== */
+/*    LAZY LOAD IMAGES    */
 (function initLazyImages() {
   const images = $$('img[src]');
   if (!('IntersectionObserver' in window)) return;
@@ -591,7 +586,7 @@ function var_(name, fallback) {
   });
 })();
 
-/* ===== SKILL CARD RIPPLE EFFECT ===== */
+/*    SKILL CARD RIPPLE EFFECT    */
 (function initRipple() {
   $$('.skill-card').forEach(card => {
     on(card, 'click', e => {
@@ -626,7 +621,7 @@ function var_(name, fallback) {
   }
 })();
 
-/* ===== PAGE TRANSITION ===== */
+/*    PAGE TRANSITION    */
 (function initPageTransition() {
   // Add transition overlay
   const overlay = document.createElement('div');
@@ -641,7 +636,7 @@ function var_(name, fallback) {
   }
 })();
 
-/* ===== CONSOLE BRANDING ===== */
+/*    CONSOLE BRANDING    */
 console.log(
   '%c Portfolio %c Built with ♥ ',
   'background: linear-gradient(135deg, #00d4ff, #a855f7); color: #000; padding: 6px 16px; border-radius: 4px 0 0 4px; font-weight: bold; font-size: 14px;',
@@ -649,7 +644,7 @@ console.log(
 );
 
 
-/* ===== GOOGLE SHEET INTEGRATION (FINAL WORKING - NO CORS FIX) ===== */
+/*    GOOGLE SHEET INTEGRATION (FINAL WORKING - NO CORS FIX)    */
 (function sendToGoogleSheet() {
   const form = document.getElementById("contactForm");
   if (!form) return;

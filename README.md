@@ -1,55 +1,91 @@
-# Developer Portfolio
+# Nischay Kumar — Developer Portfolio
+
+A fully custom personal developer portfolio built from scratch with modern UI/UX, smooth animations, and zero templates.
+
+🔗 **Live Demo:** https://nk7102001.github.io/Main-Portfolio
+🐙 **GitHub:** https://github.com/nk7102001/Main-Portfolio
+
+---
+
+## Screenshots
+
+### Home
+![Home](screenshots/HOME.png)
+
+### About / Summary
+![About](screenshots/Summary.png)
+
+### Skills
+![Skills](screenshots/skills.png)
+
+### Projects
+![Projects](screenshots/projects.png)
+
+### Services
+![Services](screenshots/offer.png)
+
+### Resume
+![Resume](screenshots/resume.png)
+
+### Contact
+![Contact](screenshots/Contact.png)
+
+### Footer
+![Footer](screenshots/nav.png)
+
+---
+
+## Features
+
+- ⚡ Animated Hero section with Typewriter effect (Typed.js) & floating profile image
+- 🎨 Custom Canvas Particle background — coded from scratch in Vanilla JS
+- 🌙 Dark / Light mode toggle with smooth theme transitions
+- 📊 Skills section with animated progress bars
+- 🗂️ Projects showcase with live demo & GitHub links
+- 📄 Downloadable Resume button
+- 📬 Contact form with animated feedback
+- 📱 Fully responsive across all screen sizes
+- 🔄 Scroll progress bar & preloader animation
+
+---
+
+## Tech Stack
+
+- **Frontend** — HTML5, CSS3, Vanilla JavaScript (ES6+)
+- **Animations** — GSAP + ScrollTrigger, AOS.js, Typed.js
+- **Icons** — Font Awesome 6, Devicon
+- **Fonts** — Google Fonts (Syne, DM Sans, JetBrains Mono)
+- **Deployment** — GitHub Pages
+
+---
 
 ## Folder Structure
+
 ```
-project/
+Main-Portfolio/
 ├── index.html          ← Main HTML file
 ├── css/style.css       ← All styles & animations
 ├── js/script.js        ← All JavaScript & interactions
-├── images/             ← Add your images here (profile.jpg, about.jpg, project1-6.jpg)
-├── resume/             ← Place your resume PDF here as resume.pdf
+├── images/             ← Profile, about & project images
+├── resume/             ← Nischay_Kumar_Resume.pdf
+├── screenshots/        ← Project screenshots
 └── assets/             ← Additional assets
 ```
 
-## Customization Guide
-
-### 1. Your Name & Info
-In `index.html`, search and replace:
-- "Alex Johnson" → your name
-- "alex@example.com" → your email
-- "+1 (123) 456-7890" → your phone
-- "San Francisco, CA" → your location
-- Social links: update href="#" with your actual URLs
-
-### 2. Profile Images
-Add to `/images/`:
-- `profile.jpg` — Hero section photo (square/portrait)
-- `about.jpg` — About section photo (portrait 4:5 ratio)
-- `project1.jpg` through `project6.jpg` — Project screenshots
-
-### 3. Resume
-Replace `/resume/resume.pdf` with your actual PDF resume.
-
-### 4. Projects
-Edit the 6 project cards in `index.html` under the Projects section:
-- Update project name, description, and tags
-- Add live demo and GitHub links
-- Add project images
-
-### 5. Skills
-Edit skill percentages by changing `data-width="XX"` values (0–100).
-
-### 6. Contact Form
-The form currently simulates sending. To make it real, integrate:
-- EmailJS (easiest, no backend)
-- Formspree
-- Your own backend API
+---
 
 ## Libraries Used
-- AOS.js — Scroll animations
-- GSAP + ScrollTrigger — Advanced animations
-- Typed.js — Typewriter effect
-- Custom Canvas Particles — Background particles
-- Font Awesome — Icons
-- Devicon — Tech icons
-- Google Fonts — Syne, DM Sans, JetBrains Mono
+
+- [AOS.js](https://michalsnik.github.io/aos/) — Scroll animations
+- [GSAP + ScrollTrigger](https://greensock.com/gsap/) — Advanced animations
+- [Typed.js](https://mattboldt.com/demos/typed-js/) — Typewriter effect
+- Custom Canvas Particles — Built from scratch in Vanilla JS
+- [Font Awesome 6](https://fontawesome.com/) — Icons
+- [Devicon](https://devicon.dev/) — Tech stack icons
+- [Google Fonts](https://fonts.google.com/) — Syne, DM Sans, JetBrains Mono
+
+---
+
+## License
+
+Free to use for educational and personal projects.
