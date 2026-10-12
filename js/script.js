@@ -148,11 +148,11 @@ function triggerHeroEntrance() {
 
   new Typed('#typed-text', {
     strings: [
+      'Freelance Web Developer',
       'Full Stack Developer',
-      'MERN Stack Developer',
-      'Web Developer',
-      'UI/UX Enthusiast',
-      'Problem Solver'
+      'Custom Web App Builder',
+      'API Integration Developer',
+      'Your Development Partner'
     ],
     typeSpeed: 55,
     backSpeed: 30,
